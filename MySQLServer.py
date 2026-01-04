@@ -12,7 +12,7 @@ try:
     cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print("Database 'alx_book_store' created successfully!")
 
-except Exception as e:
+except mysql.connector.Error as e:
     print("Error connecting to MySQL:", e)
 
 finally:
